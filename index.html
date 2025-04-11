@@ -1,40 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <!-- Define o viewport para responsividade -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redes de Computadores - Apresentação</title>
-    <!-- Bibliotecas do Reveal.js e Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Link para o CSS externo -->
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <!-- Slide 1: Camadas da Rede -->
-        <section>
-          <h2 class="slide-title"><i class="fas fa-network-wired icon"></i>Camadas da Rede</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apresentação interativa sobre Redes de Computadores com navegação via setas">
+  <title>Redes de Computadores - Apresentação</title>
+  
+  <!-- Importa a fonte Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap">
+  <!-- Link para o CSS personalizado -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Container dos slides -->
+  <div id="slides-container">
+    
+    <!-- Slide 1: Camadas da Rede -->
+    <section class="slide active" id="slide1">
+      <div class="slide-header">
+        <i class="fas fa-network-wired icon"></i>
+        <h2>Camadas da Rede</h2>
+      </div>
+      <div class="slide-content">
+        <article>
           <h3>1. Camada de Transporte</h3>
           <ul>
             <li><strong>Segmentação de Dados:</strong> Divide os dados em segmentos menores para transmissão e reagrupa-os no destino.</li>
-            <li><strong>Controle de Fluxo e Confiabilidade:</strong> Gerencia a transmissão para garantir que os segmentos sejam entregues na ordem correta e, em protocolos como o TCP, confirma o recebimento e retransmite em caso de perda.</li>
-            <li><strong>Protocolo de Transporte:</strong> Utiliza protocolos como o TCP, que oferece uma comunicação confiável e orientada à conexão, ou o UDP, que proporciona uma comunicação mais rápida, porém sem garantia de ordem ou entrega.</li>
-          </ul>          
+            <li><strong>Controle de Fluxo e Confiabilidade:</strong> Gerencia a transmissão, garantindo que os segmentos cheguem na ordem correta e, em protocolos como o TCP, confirmando o recebimento e retransmitindo se necessário.</li>
+            <li><strong>Protocolo de Transporte:</strong> Utiliza protocolos como TCP (para uma comunicação confiável) ou UDP (priorizando velocidade).</li>
+          </ul>
+        </article>
+        <article>
           <h3>2. Camada de Rede</h3>
           <ul>
-            <li><strong>Roteamento de Pacotes:</strong> Determina o caminho entre redes.</li>
+            <li><strong>Roteamento de Pacotes:</strong> Determina o melhor caminho para os dados.</li>
             <li><strong>Endereçamento IP:</strong> Identifica dispositivos de forma única.</li>
-            <li><strong>Fragmentação:</strong> Divide e reagrupa pacotes.</li>
+            <li><strong>Fragmentação:</strong> Divide e reagrupa pacotes conforme a necessidade.</li>
           </ul>
-        </section>
-        
-        <!-- Slide 2: Equipamentos e Portas -->
-        <section>
-          <h2 class="slide-title"><i class="fas fa-desktop icon"></i>Equipamentos e Portas</h2>
+        </article>
+      </div>
+    </section>
+    
+    <!-- Slide 2: Equipamentos e Portas -->
+    <section class="slide" id="slide2">
+      <div class="slide-header">
+        <i class="fas fa-desktop icon"></i>
+        <h2>Equipamentos e Portas</h2>
+      </div>
+      <div class="slide-content">
+        <article>
           <h3>1. Dispositivos de Rede</h3>
           <ul>
             <li><strong>Computadores/Servidores:</strong> Processam e trocam informações.</li>
@@ -42,11 +58,15 @@
             <li><strong>Switches:</strong> Conectam dispositivos na mesma rede.</li>
             <li><strong>Outros:</strong> Impressoras, modems e pontos de acesso.</li>
           </ul>
+        </article>
+        <article>
           <h3>2. Comunicação Nó a Nó</h3>
           <ul>
             <li><strong>Entrega Sequencial:</strong> Dados passam de um nó a outro.</li>
             <li><strong>Interconexão:</strong> Cada nó encaminha o tráfego.</li>
           </ul>
+        </article>
+        <article>
           <h3>3. Portas de Comunicação</h3>
           <ul>
             <li><strong>Definição:</strong> Pontos lógicos que direcionam o tráfego.</li>
@@ -59,37 +79,56 @@
               </ul>
             </li>
           </ul>
-        </section>
-        
-        <!-- Slide 3: Protocolos de Verificação -->
-        <section>
-          <h2 class="slide-title"><i class="fas fa-shield-alt icon"></i>Protocolos de Verificação</h2>
+        </article>
+      </div>
+    </section>
+    
+    <!-- Slide 3: Protocolos de Verificação -->
+    <section class="slide" id="slide3">
+      <div class="slide-header">
+        <i class="fas fa-shield-alt icon"></i>
+        <h2>Protocolos de Verificação</h2>
+      </div>
+      <div class="slide-content">
+        <article>
           <h3>1. TCP (Transmission Control Protocol)</h3>
           <ul>
-            <li><strong>Confiabilidade:</strong> Estabelece conexão e confirma a entrega.</li>
-            <li><strong>Ordem:</strong> Garante a sequência dos dados.</li>
+            <li><strong>Confiabilidade:</strong> Estabelece conexão e confirma a entrega dos dados.</li>
+            <li><strong>Ordem:</strong> Garante que os dados sejam recebidos na sequência correta.</li>
             <li><strong>Uso:</strong> Ideal para transferência de arquivos e navegação.</li>
           </ul>
+        </article>
+        <article>
           <h3>2. UDP (User Datagram Protocol)</h3>
           <ul>
-            <li><strong>Baixa Latência:</strong> Transmite sem conexão prévia.</li>
+            <li><strong>Baixa Latência:</strong> Não estabelece conexão, priorizando a velocidade.</li>
             <li><strong>Aplicações:</strong> Streaming, jogos e VoIP.</li>
-            <li><strong>Eficiência:</strong> Minimiza sobrecarga mesmo com perda de pacotes.</li>
+            <li><strong>Eficiência:</strong> Minimiza sobrecarga mesmo com a possibilidade de perda de pacotes.</li>
           </ul>
-        </section>
-        
-        <!-- Slide 4: Mecanismos e Números de Portas -->
-        <section>
-          <h2 class="slide-title"><i class="fas fa-cogs icon"></i>Mecanismos e Números de Portas</h2>
+        </article>
+      </div>
+    </section>
+    
+    <!-- Slide 4: Mecanismos e Números de Portas -->
+    <section class="slide" id="slide4">
+      <div class="slide-header">
+        <i class="fas fa-cogs icon"></i>
+        <h2>Mecanismos e Números de Portas</h2>
+      </div>
+      <div class="slide-content">
+        <article>
           <h3>1. Mecanismos de Comunicação</h3>
           <ul>
-            <li><strong>Softwares:</strong> Gerenciam erros e fluxo de dados.</li>
-            <li><strong>Monitoramento:</strong> Ferramentas avaliam integridade e desempenho.</li>
+            <li><strong>Softwares:</strong> Gerenciam erros e o fluxo de dados.</li>
+            <li><strong>Monitoramento:</strong> Ferramentas que avaliam a integridade e o desempenho da rede.</li>
           </ul>
+        </article>
+        <article>
           <h3>2. Números de Portas</h3>
           <ul>
             <li><strong>Definição:</strong> Identificadores únicos para cada serviço.</li>
-            <li><strong>Classificação:</strong>
+            <li>
+              <strong>Classificação:</strong>
               <ul>
                 <li><strong>Bem Conhecidas:</strong> 0 a 1023</li>
                 <li><strong>Registradas:</strong> 1024 a 49151</li>
@@ -98,20 +137,40 @@
             </li>
             <li><strong>Regulamentação:</strong> Gerenciadas por IANA e ICANN.</li>
           </ul>
+        </article>
+        <article>
           <h3>3. Exemplos de Portas Comuns</h3>
           <ul>
             <li>80 – HTTP</li>
             <li>443 – HTTPS</li>
             <li>25 – SMTP</li>
           </ul>
-        </section>
-        
+        </article>
       </div>
-    </div>
+    </section>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-    <script>
-      Reveal.initialize();
-    </script>
-  </body>
+  </div>
+  
+  <!-- Script JavaScript para navegação nos slides via setas -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+        if (currentSlide < slides.length - 1) {
+          slides[currentSlide].classList.remove('active');
+          currentSlide++;
+          slides[currentSlide].classList.add('active');
+        }
+      } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+        if (currentSlide > 0) {
+          slides[currentSlide].classList.remove('active');
+          currentSlide--;
+          slides[currentSlide].classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
 </html>
