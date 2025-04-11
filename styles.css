@@ -1,0 +1,98 @@
+/* Importa a fonte "Open Sans" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset básico e definição do box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define a altura total e base de fonte para o documento */
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px; /* Tamanho base */
+}
+
+/* Container principal do Reveal.js */
+.reveal {
+  height: 100%;
+}
+
+/* Container dos slides com padding reduzido para otimizar o espaço */
+.reveal .slides {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1% 2%;
+}
+
+/* Título dos slides (classe slide-title) - tamanho reduzido */
+.slide-title {
+  font-size: 12px;  /* Reduzido para não ficar imenso */
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+/* Define tamanhos para todos os headers para evitar inconsistências */
+/* h1 e h2 permanecerão no mesmo tamanho que o base (12px) */
+h1 {
+  font-size: 12px;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 12px;
+  line-height: 1.2;
+}
+/* h3: utilizado para subtítulos no conteúdo dos slides */
+h3 {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #f39c12;
+  margin-top: 2px;
+}
+/* h4, h5 e h6 definidos em tamanhos menores */
+h4 {
+  font-size: 11px;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 10px;
+  line-height: 1.2;
+}
+h6 {
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+/* Estilização para listas e itens */
+ul, li {
+  font-size: 12px;
+  line-height: 1.2;
+  margin-left: 8px;
+  margin-bottom: 2px;
+}
+
+/* Estilo para os ícones */
+.icon {
+  margin-right: 2px;
+  color: #f39c12;
+}
+
+/* Cada slide permite rolagem interna se necessário */
+.reveal .slides section {
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Ajustes para telas com largura até 600px */
+@media (max-width: 600px) {
+  .reveal .slides {
+    padding: 2% 1%;
+  }
+  .slide-title, h1, h2, h3, ul, li, h4, h5, h6 {
+    font-size: 11px;
+  }
+}
